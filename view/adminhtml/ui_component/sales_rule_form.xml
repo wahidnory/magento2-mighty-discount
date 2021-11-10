@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
-    <fieldset name="mighty_discount" sortOrder="40">
+    <fieldset name="mighty_discount" sortOrder="35">
         <settings>
             <collapsible>true</collapsible>
             <label translate="true">Mighty Discount</label>
@@ -9,7 +9,7 @@
         <field name="mighty_discount_is_active" formElement="checkbox">
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
-                    <item name="source" xsi:type="string">mighty_catalog_rule</item>
+                    <item name="source" xsi:type="string">mighty_sales_rule</item>
                     <item name="default" xsi:type="number">0</item>
                 </item>
             </argument>
