@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <!-- CATALOGRULE -->
+    <table name="catalogrule_mighty_rule" resource="default" engine="innodb" comment="The rule that rules them all">
+        <column xsi:type="int" name="mighty_id" unsigned="true" nullable="false" identity="true"
+                comment="The Mighty Id"/>
+        <column xsi:type="int" name="catalogrule_id" unsigned="true" nullable="false" comment="The catalogrule subject"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="mighty_id"/>
+        </constraint>
+
+        <constraint
+            xsi:type="foreign"
+            referenceId="CATALOGRULE_MIGHTY_RULE_CATALOGRULE_ID_CATALOGRULE_RULE_ID"
+            table="catalogrule_mighty_rule"
+            column="catalogrule_id"
+            referenceTable="catalogrule"
+            referenceColumn="rule_id"
+            onDelete="CASCADE"
+        />
+    </table>
+
+    <!-- SALESRULE -->
+    <table name="salesrule_mighty_rule" resource="default" engine="innodb" comment="The rule that rules them all">
+        <column xsi:type="int" name="mighty_id" unsigned="true" nullable="false" identity="true"
+                comment="The Mighty Id"/>
+        <column xsi:type="int" name="salesrule_id" unsigned="true" nullable="false" comment="The salesrule subject"/>
+
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="mighty_id"/>
+        </constraint>
+
+        <constraint
+            xsi:type="foreign"
+            referenceId="SALESRULE_MIGHTY_RULE_SALESRULE_ID_SALESRULE_RULE_ID"
+            table="salesrule_mighty_rule"
+            column="salesrule_id"
+            referenceTable="salesrule"
+            referenceColumn="rule_id"
+            onDelete="CASCADE"
+        />
+    </table>
+</schema>

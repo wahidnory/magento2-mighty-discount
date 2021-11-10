@@ -1,0 +1,6 @@
+- Add admin checkbox on sales_rule and catalog_rule
+-
+
+
+- Mark this rule as different color in grid, to specify this is a global rule.
+- Maybe create an extra row with that specification
